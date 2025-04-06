@@ -9,6 +9,7 @@ seaborn = "==0.13.1"
 matplotlib = "*"
 pylint = "*"
 black = "*"
+pytest = "*"
 
 [dev-packages]
 
