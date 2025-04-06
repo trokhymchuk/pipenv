@@ -48,3 +48,20 @@ def test_input_pandas_csv_extension():
         tmp_file.flush()
         result = input_pandas(tmp_file.name, 'csv')
     pandas.testing.assert_frame_equal(result, expected_pandas_dataframe)
+
+
+def test_input_pandas_json_extension():
+    expected_pandas_dataframe = pandas.DataFrame({
+        "a": ["1", "artem"],
+        "b": ["2", "trokhymchuk"],
+        "c": ["3", "artem"],
+    })
+
+    test_content = expected_pandas_dataframe.to_json()
+
+    with tempfile.NamedTemporaryFile(mode='w+', encoding='utf-8', delete=True) as tmp_file:
+        tmp_file.write(test_content)
+        tmp_file.flush()
+        result = input_pandas(tmp_file.name, 'json')
+
+    pandas.testing.assert_frame_equal(result, expected_pandas_dataframe)
