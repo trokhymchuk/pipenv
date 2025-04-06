@@ -4,6 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+numpy = "*"
+seaborn = "==0.13.1"
+matplotlib = "*"
+pylint = "*"
+black = "*"
 
 [dev-packages]
 
