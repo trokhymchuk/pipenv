@@ -4,7 +4,7 @@ def output_console(text):
     Args:
         text (str): text to display to print in console.
     """
-    pass
+    print(text)
 
 
 def output_builtin(text, file_path):
@@ -14,4 +14,4 @@ def output_builtin(text, file_path):
         text (str): text to display to print in console.
         file_path(str): The path to the file to output to.
     """
-    pass
+    open(file_path, 'w', encoding='utf-8').write(text)
