@@ -1,6 +1,6 @@
 
 
-cccdef main():
+def main():
     pass
 
 
